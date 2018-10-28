@@ -1,0 +1,2 @@
+# smacty
+smart city Dashboard
