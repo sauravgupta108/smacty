@@ -1,0 +1,8 @@
+{
+	"HOST"		: "192.168.2.130",
+	"PORT"		: 1883,
+	"keepalive"	: 60,
+	"USERNAME"	: "tech",
+	"PASSWORD"	: "mahindra",
+	"qos"		: 0
+}

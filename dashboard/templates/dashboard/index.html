@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Smacty</title>
+		{% load static %}
+		<link rel = 'icon' type = 'image/ico' href = "{% static 'city.png' %}">
+		<link rel = "stylesheet" type = "test/css" href = "{% static 'css/style.css' %}">
+		<script src = "{% static 'jquery/jquery.js' %}"></script>
+		<script src = "{% static 'js/pub_sub.js' %}"></script>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td style = "border: 1px solid #ffb366;">
+					<div>
+						<form id = "pub-form" method = "POST" >
+							{% csrf_token %}
+							<textarea id = "topic" placeholder="topic" rows = "1" cols = "50"></textarea><br><br>
+							<textarea id = "message" placeholder="Enter message" rows = "1" cols = "50"></textarea><br><br>
+							<input type = "submit" name = "pub" value = "Publish" id = "publ"/>
+						</form>
+					</div>
+				</td>
+				<td style = "border: 1px solid #ffb366;">
+					<div>
+						<form id = "sub-form" method = "POST">
+							{% csrf_token %}
+							<input type = "text" id = "sub-tpc" placeholder="Topic to subscribe"><br><br>
+							<input type = "submit" id = "initiate" value = "Initialize">&nbsp &nbsp
+							<input type = "submit" id = "start_sub" value = "Get Messages">&nbsp
+						</form>						
+					</div>
+				</td>
+			</tr>
+			<tr><td style = "border: 1px solid #ffb366;">
+					<div id = "test">
+					</div>
+				</td>
+				<td style = "border: 1px solid #ffb366;">
+					<div id = "sub-result">
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+		<br><br>
+		
+	</body>
+</html>
