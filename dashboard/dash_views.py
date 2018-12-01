@@ -6,7 +6,7 @@ import json, time, os
 
 # Create your views here.
 def index(request):
-	return render(request,'dashboard/index.html')
+	return render(request,'dashboard/tabbed_view.html')
 
 def publish(request):
 	if request.method == "POST":

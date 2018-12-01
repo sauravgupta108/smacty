@@ -25,7 +25,7 @@ function subscribe(event){
 
 		$("#sub-tpc").prop("disabled", false); $('#start_sub').prop("disabled", false);
 
-		$("#sub-result").text("Initiated");
+		$("#sub-result").text("");
 	}
 
 	else{
@@ -51,7 +51,8 @@ function ajax_subscribe(topic){
 			$("#sub-result").text(json["result"]);			
 		},		
 		error	: function(xhr,errmsg,err){
-			alert("Sub: " + err);			
+			alert("Sub: " + err);
+			$("#sub-result").text("");		
 		}
 	}).always(function(){		
 			$("#sub-tpc").prop("disabled", false);

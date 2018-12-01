@@ -1,0 +1,27 @@
+.tab-group:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.inactive_tab{
+	color: #494949 !important;	
+	background: #ffffff;
+	padding: 20px;
+	border: 1px  #494949 !important;
+	cursor: pointer;
+	display: inline-block;
+	float: left;
+}
+.active_tab {
+	color: #ffffff !important;
+	background: #494949;
+	border: 1px  #494949 !important;
+	float: left;
+}
+.tab-content {
+	float: left; 
+	background-color: #eaecef;
+	height: 400px; 
+	width: 600px;
+}

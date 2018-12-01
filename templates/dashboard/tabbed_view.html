@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Smacty</title>
+		{% load static %}
+		<link rel = 'icon' type = 'image/ico' href = "{% static 'city.png' %}">
+		<link rel = 'stylesheet' href = "{% static 'css/tabbed_view.css' %}">
+		<script src = "{% static 'jquery/jquery.js' %}"></script>
+		<script src = "{% static 'js/tabs.js' %}"></script>
+	</head>
+	
+	<body>
+		<div class = tab-group id = "tabs">
+			<button id = "lights" class = inactive_tab onclick="content_for_tab('lights')">Lights</button>
+			<button id = "dustbins" class = inactive_tab onclick="content_for_tab('dustbins')">Dustbins</button>
+			<button id = "water_tank" class = inactive_tab onclick="content_for_tab('water_tank')">Water Tanks</button>
+		</div>
+		<div id = "tab_content" class = tab-content>			
+			<img src = "{% static 'images/default_tab_content.jpg' %}" height = '400px' width = '600px'>
+		</div>
+
+	</body>
+</html>
