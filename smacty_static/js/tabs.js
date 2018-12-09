@@ -1,6 +1,7 @@
 function content_for_tab(tab_name, event){
-	var a = '#'+tab_name;
 	var tabs = $("#tabs")[0].children
+
+	$("#tab_content").html("<p>Please Wait...!!!</p>")
 
 	for (var i = 0; i < tabs.length;i++){
 		if ((tabs[i].id) == tab_name){
@@ -11,20 +12,21 @@ function content_for_tab(tab_name, event){
 			$("#"+tabs[i].id).addClass("inactive_tab");
 		}
 	}
-	tab_content = get_tab_content(tab_name)
+	tab_content = get_tab_content(tab_name);
 }
 
-function get_tab_content(tab_name){
+function get_tab_content(tab_name){	
 	$.ajax({
-		url		: "<>",
 		type	: "GET",
-		data	: {tab: tab_name},
+		url		: "tab",
+		data	: {tab_name: tab_name},
 		success	: function(html){
+			$("#tab_content").html(html);
+			return html;
 		},
-		error	: function(xhr,errmsg,err){
-			alert(err)
+		error	: function(xhr){
+			alert(xhr.status + " : " + xhr.statusText)
 		},
-
 	})
 }
 

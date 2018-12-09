@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 
 from etc_help.mqtt_thread import Mqtt_Thread
 import json, time, os
+from .data_from_api import Data_via_api as DVA 
 
 # Create your views here.
 def index(request):
@@ -43,3 +44,15 @@ def subscribe(request):
 		out_put["result"] = sub_obj.get_subscribed_messages()
 
 		return HttpResponse(json.dumps(out_put), content_type="application/json")
+
+def tab_content(request):
+	tab_name = request.GET['tab_name']
+
+	api_response = list(DVA().tab_data(request, tab_name))			# list of dictionaries
+	template_name = "dashboard/sub_dash/" + tab_name + ".html"
+	variables = {"APIData":api_response,
+				 "TabName": tab_name,
+				 "Template": template_name}
+
+	return render(request, "dashboard/tab_contents.html", variables)
+	# return render(request,'dashboard/index.html')

@@ -1,0 +1,216 @@
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&zn=&sn=&rs=-1&ls=-2 HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&zn=&sn=&rs=-1&ls=-2 HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&zn=&sn=&rs=-1&ls=-2 HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights HTTP/1.1" 200 1504
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&zn=&sn=&rs=&ls= HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights HTTP/1.1" 200 1504
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/dustbins?tab_name=dustbins HTTP/1.1" 200 1530
+ERROR:django.request:Internal Server Error: /dashboard/tab
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'tab_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./dashboard/dash_views.py", line 49, in tab_content
+    tab_name = request.GET['tab_name']
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'tab_name'
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights HTTP/1.1" 200 1504
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights HTTP/1.1" 200 1504
+ERROR:django.request:Internal Server Error: /dashboard/tab
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'tab_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./dashboard/dash_views.py", line 49, in tab_content
+    tab_name = request.GET['tab_name']
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'tab_name'
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights HTTP/1.1" 200 1504
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&zn=1234 HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&zn=zone001 HTTP/1.1" 200 1504
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&zn=zone001&sn=8 HTTP/1.1" 200 101
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&zn=zone001&sn=4 HTTP/1.1" 200 102
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&ls=1 HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&ls=0 HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&rs=1 HTTP/1.1" 200 501
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&rs=0 HTTP/1.1" 200 1004
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&rs=0 HTTP/1.1" 200 1004
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&sn=1&rs=0 HTTP/1.1" 200 302
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights&rs=0 HTTP/1.1" 200 1004
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/dustbins?tab_name=dustbins HTTP/1.1" 200 1530
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/dustbins?tab_name=dustbins&fs=1 HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/dustbins?tab_name=dustbins HTTP/1.1" 200 1530
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/dustbins?tab_name=dustbins&zn=zone006 HTTP/1.1" 200 86
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks HTTP/1.1" 200 1060
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&fp=80 HTTP/1.1" 500 14844
+ERROR:django.request:Internal Server Error: /dashboard/tab
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./dashboard/dash_views.py", line 51, in tab_content
+    api_response = list(DVA().tab_data(request, tab_name))			# list of dictionaries
+  File "./dashboard/data_from_api.py", line 29, in tab_data
+    return api_response.json()
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks HTTP/1.1" 200 1060
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&fp=0 HTTP/1.1" 500 14840
+ERROR:django.request:Internal Server Error: /dashboard/tab
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./dashboard/dash_views.py", line 51, in tab_content
+    api_response = list(DVA().tab_data(request, tab_name))			# list of dictionaries
+  File "./dashboard/data_from_api.py", line 29, in tab_data
+    return api_response.json()
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights HTTP/1.1" 200 1504
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks HTTP/1.1" 200 1060
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&fp=80 HTTP/1.1" 500 14840
+ERROR:django.request:Internal Server Error: /dashboard/tab
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./dashboard/dash_views.py", line 51, in tab_content
+    api_response = list(DVA().tab_data(request, tab_name))			# list of dictionaries
+  File "./dashboard/data_from_api.py", line 29, in tab_data
+    return api_response.json()
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&zn=zone001 HTTP/1.1" 200 89
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&zn=zone001&sn=1 HTTP/1.1" 200 89
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&zn=zone003&sn=1 HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&zn=zone003 HTTP/1.1" 200 89
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&zn=zone003&sn=3 HTTP/1.1" 200 89
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&zn=zone003&sn=3&fp=0 HTTP/1.1" 500 14908
+ERROR:django.request:Internal Server Error: /dashboard/tab
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./dashboard/dash_views.py", line 51, in tab_content
+    api_response = list(DVA().tab_data(request, tab_name))			# list of dictionaries
+  File "./dashboard/data_from_api.py", line 29, in tab_data
+    return api_response.json()
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks HTTP/1.1" 200 1060
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&fp=80 HTTP/1.1" 200 1060
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&fp=10 HTTP/1.1" 200 793
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&fp=1000 HTTP/1.1" 200 1060
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&fp=99 HTTP/1.1" 200 1060
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&fp=99lk HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&fp=99lk HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/water_tanks?tab_name=water_tanks&fp=11 HTTP/1.1" 200 793
