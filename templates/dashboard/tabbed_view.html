@@ -7,7 +7,9 @@
 		<link rel = 'icon' type = 'image/ico' href = "{% static 'city.png' %}">
 		<link rel = 'stylesheet' href = "{% static 'css/tabbed_view.css' %}">
 		<script src = "{% static 'jquery/jquery.js' %}"></script>
-		<script src = "{% static 'js/tabs.js' %}"></script>
+		<script src = "{% static 'js/tabs.js' %}"></script>		
+		<script type="text/javascript" src = "{% static 'js/process_tab_content.js' %}"></script>
+		<link rel = 'stylesheet' href = "{% static 'css/display_results.css' %}">
 	</head>
 	
 	<body>
@@ -17,7 +19,7 @@
 			<button id = "water_tanks" class = inactive_tab onclick="content_for_tab('water_tanks')">Water Tanks</button>
 		</div>
 		<div id = "tab_content" class = tab-content>			
-			<img src = "{% static 'images/default_tab_content.jpg' %}" height = '400px' width = '600px'>
+			<img src = "{% static 'images/default_tab_content.jpg' %}" height = '1000px' width = '1000px'>
 		</div>
 
 	</body>

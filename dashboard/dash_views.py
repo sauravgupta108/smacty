@@ -52,7 +52,8 @@ def tab_content(request):
 	template_name = "dashboard/sub_dash/" + tab_name + ".html"
 	variables = {"APIData":api_response,
 				 "TabName": tab_name,
-				 "Template": template_name}
+				 "Template": template_name,
+				 "isFiltered": len(request.GET) == 1}
 
 	return render(request, "dashboard/tab_contents.html", variables)
 	# return render(request,'dashboard/index.html')

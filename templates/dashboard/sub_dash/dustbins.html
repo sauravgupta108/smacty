@@ -1,25 +1,19 @@
-<html>
-	<head>
-		{% load static %}
-		<script src = "{% static 'jquery/jquery.js' %}"></script>
-		<script type="text/javascript" src = "{% static 'js/process_tab_content.js' %}"></script>
-	</head>
-	<body>
-		<div id = "filters" >			
-			Zone <input type="text" name="zone" placeholder="Zone ID">
-			Street Number <input type = "text" placeholder="Street Number" name = "street"><br>
-			Filled
-			<select name = "filled">
-				<option name = "" value = ""></option>
-				<option name = "Filled" value = "1">Filled</option>
-				<option name = "Empty" value = "0">Empty</option>
-			</select>
-			<input type="submit" value="Filter" onclick = "process_results('dustbins')">			
-		</div>
-		<div id = "results">
-			{% for i in APIData %}
-				{{ i }}<br>
-			{% endfor %}
-		</div>
-	</body>
-</html>
+{% if isFiltered %}
+	<div id = "filters" >			
+		Zone <input type="text" name="zone" placeholder="Zone ID">
+		Street Number <input type = "text" placeholder="Street Number" name = "street"><br>
+		Filled
+		<select name = "filled">
+			<option name = "" value = ""></option>
+			<option name = "Filled" value = "1">Filled</option>
+			<option name = "Empty" value = "0">Empty</option>
+		</select>
+		<input type="submit" value="Filter" onclick = "filter_results('dustbins')">
+	</div>
+{% endif %}
+
+<div id = "results">
+	<div id = "dustbin-summary">
+		<button class = "total-count"> Dustbins ({{ APIData|length }})</button>
+	</div>	
+</div>

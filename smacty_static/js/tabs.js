@@ -25,7 +25,7 @@ function get_tab_content(tab_name){
 			return html;
 		},
 		error	: function(xhr){
-			alert(xhr.status + " : " + xhr.statusText)
+			$("#tab_content").html("<p>" + xhr.status + " : " + xhr.statusText + "</p>")
 		},
 	})
 }

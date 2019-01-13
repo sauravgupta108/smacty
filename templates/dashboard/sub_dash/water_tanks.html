@@ -1,21 +1,13 @@
-<html>
-	<head>
-		{% load static %}
-		<script src = "{% static 'jquery/jquery.js' %}"></script>
-		<script type="text/javascript" src = "{% static 'js/process_tab_content.js' %}"></script>
-	</head>
-	<body>
-		<div id = "filters" >			
-			Zone <input type="text" name="zone" placeholder="Zone ID">
-			Street Number <input type = "text" placeholder="Street Number" name = "street"><br>
-			Filled Percentage <input type = "text" name = "fill_percnt" placeholder="%">
-			
-			<input type="submit" value="Filter" onclick = "process_results('water_tanks')">		
-		</div>
-		<div id = "results">
-			{% for i in APIData %}
-				{{ i }}<br>
-			{% endfor %}
-		</div>
-	</body>
-</html>
+{% if isFiltered %}
+	<div id = "filters" >		
+		Zone <input type="text" name="zone" placeholder="Zone ID">
+		Street Number <input type = "text" placeholder="Street Number" name = "street"><br>
+		Filled Percentage <input type = "text" name = "fill_percnt" placeholder="%">				
+		<input type="submit" value="Filter" onclick = "process_results('water_tanks')">
+	</div>
+{% endif %}
+<div id = "results">
+	<div id = "tank-summary">
+		<button class = "total-count"> Water Tanks ({{ APIData|length }})</button>
+	</div>
+</div>

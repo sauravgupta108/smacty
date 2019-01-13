@@ -1,34 +1,28 @@
-<html>
-	<head>
-		{% load static %}
-		<script src = "{% static 'jquery/jquery.js' %}"></script>
-		<script type="text/javascript" src = "{% static 'js/process_tab_content.js' %}"></script>
-	</head>
-	<body>
-		<div id = "filters" >			
-			Zone <input type="text" name="zone" placeholder="Zone ID">
-			Street Number <input type = "text" placeholder="Street Number" name = "street"><br>
-			
-			Health
-			<select name = "health">
-				<option name = "" value = ""></option>
-				<option name = "ALIVE" value = "1">Alive</option>
-				<option name = "DEAD" value = "0">Dead</option>
-				<option name = "SICK" value = "-1">Sick</option>
-			</select>
+{% if isFiltered %}
+	<div id = "filters" >			
+		Zone <input type="text" name="zone" placeholder="Zone ID">
+		Street Number <input type = "text" placeholder="Street Number" name = "street"><br>
+		
+		Health
+		<select name = "health">
+			<option name = "" value = ""></option>
+			<option name = "ALIVE" value = "ALIVE">Alive</option>
+			<option name = "DEAD" value = "DEAD">Dead</option>
+			<option name = "SICK" value = "SICK">Sick</option>
+		</select>
 
-			Status
-			<select name = "running">
-				<option name = "" value = ""></option>
-				<option name = "ON" value = "1">On</option>
-				<option name = "OFF" value = "0">Off</option>
-			</select>
-			<input type="submit" value="Filter" onclick = "process_results('lights')">			
-		</div>
-		<div id = "results">
-			{% for i in APIData %}
-				{{ i }}<br>
-			{% endfor %}
-		</div>
-	</body>
-</html>
+		Status
+		<select name = "running">
+			<option name = "" value = ""></option>
+			<option name = "ON" value = "1">On</option>
+			<option name = "OFF" value = "0">Off</option>
+		</select>
+		<input type="submit" value="Filter" onclick = "filter_results('lights')">			
+	</div>
+{% endif %}
+
+<div id = "results">
+	<div id = "light-summary">
+		<button class = "total-count" onclick = ""> Street Lights ({{ APIData|length }})</button>
+	</div>	
+</div>

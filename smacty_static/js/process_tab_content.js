@@ -1,10 +1,12 @@
-function process_results(tab, event){
+function filter_results(tab, event){	
 	$("#results").html("<p>Wait...!!</p")
 
 	var aa = $("#filters :text");
 	var bb = $("#filters > select");
 	var variables = {};
 	variables.tab_name = tab;
+	variables.filters = "yes";
+
 	for(i=0;i<aa.length;i++){
 		if (aa[i].name == "zone" && aa[i].value != ""){ 
 			variables.zn = aa[i].value;
@@ -34,10 +36,10 @@ function process_results(tab, event){
 		data	: variables,
 		success	: function(html){
 			$("#results").html(html);
-			return html;
+			//return html;
 		},
 		error	: function(xhr){
-			alert(xhr.status + " : " + xhr.statusText)
+			$("#results").html(xhr.status + " : " + xhr.statusText);
 		},
 	})
 }
