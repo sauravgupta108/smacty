@@ -1,0 +1,39 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Smacty{% endblock %}
+
+{% block initial_scripts %}
+	{% load static %}
+	<script type="text/javascript" src="{% static 'js/tabs_handler.js' %}">
+	</script>
+{% endblock %}
+
+{% block nav_bar %}
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+		    <ul class="nav navbar-nav">
+		      <li class = "active"><a href={% url 'home' %} >Home</a></li>
+		      <li><a href={% url 'about' %}>About</a></li>
+		      <li><a href={% url 'contact' %}>Contact</a></li>
+		    </ul>
+		</div>
+	</nav>
+{% endblock %}
+{% block page-content %}
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<ul class="nav nav-tabs">
+				<li ><a data-toggle="tab" onclick="light.lights()">Light</a></li>
+				<li><a data-toggle="tab" onclick="dustbin.dustbins()">Dustbin</a></li>
+				<li><a data-toggle="tab" onclick="water_tank.tanks()">Water Tank</a></li>
+			</ul>
+		</div>
+		<div class="panel-body">			
+			<div id="entity_content" class="tab-pane fade in active">
+				
+			</div>
+				
+		</div>
+		<div class="panel-footer">
+		</div>
+	</div>
+{% endblock %}

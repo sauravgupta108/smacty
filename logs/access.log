@@ -876,3 +876,9 @@ DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
 DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights HTTP/1.1" 200 1504
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
 DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/dustbins?tab_name=dustbins HTTP/1.1" 200 1530
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/dustbins?tab_name=dustbins HTTP/1.1" 200 1530
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/dustbins?tab_name=dustbins HTTP/1.1" 200 1530
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.130
+DEBUG:urllib3.connectionpool:http://192.168.1.130:7979 "GET /citysmart/street_lights?tab_name=lights HTTP/1.1" 200 1504

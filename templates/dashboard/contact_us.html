@@ -1,0 +1,18 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Contact Smacty{% endblock %}
+{% block nav_bar %}
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+		    <ul class="nav navbar-nav">
+		      <li><a href={% url 'home' %}>Home</a></li>
+		      <li><a href={% url 'about' %} >About</a></li>
+		      <li class = "active"><a href={% url 'contact' %}>Contact</a></li>
+		    </ul>
+		</div>
+	</nav>
+{% endblock %}
+{% block page-content %}
+	<div>
+		<p>This is contact us page.</p>
+	</div>
+{% endblock %}
