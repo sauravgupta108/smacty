@@ -1,0 +1,55 @@
+{% extends "dashboard/linwazs.html" %}
+
+{% block initial_scripts %}
+	<style>
+		span {font-size: 2em;}		
+	</style>
+
+{% endblock %}
+
+{% block Heading %}	
+	<span class = "glyphicon glyphicon-certificate" style="color: #c6ff1a;"></span> <span class=>Light</span>
+{% endblock %}
+
+{% block summary %}
+	<div class="row">		
+		<div class="col-xs-4 col-sm-4" style="padding: 2px;">
+			<button class="btn btn-info btn-lg btn-block">Total <span class="badge">{{ total_lights }}</span></button>
+		</div>
+		<div class="col-xs-4 col-sm-4" style="padding: 2px;">
+			<button class="btn btn-warning btn-lg btn-block">ON <span class="badge">{{ runnig_lights }}</span></button>
+		</div>
+		<div class="col-xs-4 col-sm-4 " style="padding: 2px;">
+			<button class="btn btn-success btn-lg btn-block">OK <span class="badge">{{ health_ok}}</span></button>
+		</div>
+	</div>
+{% endblock %}
+
+{% block filters %}	
+	<div class="form-inline">
+		<label for="lt_street_number">Street Number: </label>
+		<input type="text" class = "form-control" id="lt_street_number" onchange="light.light_filters()"/>
+		
+		<label for="lt_health_status">Live Status: </label>
+		<select class = "form-control" id="lt_health_status" onchange="light.light_filters()">
+			<option value="-1">--Select--</option>
+			<option value="1">Alive Light</option>
+			<option value="2">Sick Light</option>
+			<option value="0">Dead Light</option>
+		</select>
+		
+		<label for="lt_running_status">Running Status: </label>
+		<select class = "form-control" id="lt_running_status" onchange="light.light_filters()">
+			<option value="-1">--Select--</option>
+			<option value="1">On</option>
+			<option value="0">Off</option>
+		</select>
+		
+		<label for="lt_zone">Zone: </label>
+		<input id="lt_zone" type="text" class = "form-control" onchange="light.light_filters()">
+	</div>
+{% endblock %}
+
+{% block results %}
+	Results
+{% endblock %}

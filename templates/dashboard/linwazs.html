@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		{% load static %}
+		<link rel = 'icon' type = 'image/ico' href = "{% static 'city.png' %}">
+		
+		<script src = "{% static 'jquery/jquery.min.js' %}"></script>
+		
+		<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+		<script src ="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+		{% block initial_scripts %} {% endblock %}
+	</head>
+	<body class = "container">
+				
+		{% block Heading %} {% endblock %}
+
+		<div class="panel-body">
+			{% block summary %} {% endblock %}
+		</div>
+		
+		<div class="panel-body">
+			{% block filters %} {% endblock %}
+		</div>
+		
+		<div class="panel-body">
+			{% block results %} {% endblock %}
+		</div>
+
+		<div class="footer" style="text-align: center;">
+			<p>&reg;Smacty Pvt. Ltd. All rights reserved.</p>
+		</div>
+		
+	</body>
+</html>

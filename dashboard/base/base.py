@@ -28,6 +28,6 @@ class Base:
 		else:
 			dev_logger.log(5, msg)
 
-	def render(self, template_name=None):
-		return HttpResponse(render_to_string(template_name))
+	def render(self, template_name=None, variables=None):
+		return HttpResponse(render_to_string(template_name, context=variables))
 		
