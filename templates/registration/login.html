@@ -1,0 +1,26 @@
+{% extends "base/base.html" %}
+{% block title %}Smacty Login{% endblock %}
+
+{% block initial_scripts %} 
+	{% load static %}
+	<script src = "{% static 'js/utils.js' %}"></script>
+{% endblock %}
+
+{% block page-content %}
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<form method="post">		
+				{% csrf_token %}
+				<div class="form-group">
+					<label for="id_username">UserName</label>
+					<input type='text' class="form-control" name="username">
+				
+					<label for="id_password">Password</label>
+					<input type='password' class="form-control" name="password">
+				</div>
+				<button class='btn btn-success btn-block' type="submit">Login</button>
+			</form>
+		</div>
+	</div>
+	<br><br>
+{% endblock %}

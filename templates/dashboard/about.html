@@ -1,4 +1,4 @@
-{% extends "dashboard/base.html" %}
+{% extends "base/base.html" %}
 {% block title %}About Smacty{% endblock %}
 {% block nav_bar %}
 	<nav class="navbar navbar-default">
@@ -7,6 +7,7 @@
 		      <li><a href={% url 'home' %}>Home</a></li>
 		      <li  class = "active"><a href={% url 'about' %} >About</a></li>
 		      <li><a href={% url 'contact' %}>Contact</a></li>
+		      <li><a href={% url 'login' %}>Login</a></li>
 		    </ul>
 		</div>
 	</nav>

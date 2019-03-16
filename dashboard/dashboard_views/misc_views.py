@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
+from django.contrib.auth.decorators import login_required
 
 from etc_help.mqtt_thread import Mqtt_Thread
 import json, time, os, logging as log
 
 
 # Create your views here.
+@login_required
 def index(request):    
     return render(request,'dashboard/homepage.html')
 

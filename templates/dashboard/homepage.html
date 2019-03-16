@@ -1,4 +1,4 @@
-{% extends "dashboard/base.html" %}
+{% extends "base/base.html" %}
 {% block title %}Smacty{% endblock %}
 
 {% block initial_scripts %}
@@ -14,6 +14,7 @@
 		      <li class = "active"><a href={% url 'home' %} >Home</a></li>
 		      <li><a href={% url 'about' %}>About</a></li>
 		      <li><a href={% url 'contact' %}>Contact</a></li>
+		      <li><a href={% url 'login' %}>Login</a></li>
 		    </ul>
 		</div>
 	</nav>
