@@ -17,8 +17,6 @@ def about(request):
 def contact(request):    
     return render(request,'dashboard/contact_us.html')
 
-
-
 def publish(request):
     if request.method == "POST":
         topic = request.POST["topic"]

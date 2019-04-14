@@ -9,6 +9,16 @@
 {% block page-content %}
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
+			{% if InvalidCredentials %}
+				<div class="alert alert-danger">
+					Invalid Credentials. Please try again. !!!
+				</div>
+			{% endif%}
+			{% if LoggedOut %}
+				<div class="alert alert-success">
+					You have successfully logged out.
+				</div>
+			{% endif %}
 			<form method="post">		
 				{% csrf_token %}
 				<div class="form-group">
