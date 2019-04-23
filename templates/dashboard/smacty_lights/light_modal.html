@@ -1,0 +1,39 @@
+<div class="modal fade" id="light_details">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                	<span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Light Details</h4>                
+            </div>
+
+            <div class="modal-body">
+            	<div class="panel panel-warning">
+            		<div class="panel-heading">
+            			<div id="light_id" style="font-size: 25px;"></div>
+            			<div id="light_location"></div>
+            		</div>
+            		<div class="panel-body">
+            			<label class="radio-inline">
+            				<input type="radio" name="light_posiiton" id="light_off" onclick="light.light_switch(0)">Off
+					    </label>
+					    <label class="radio-inline">
+					    	<input type="radio" name="light_posiiton" id="light_on" onclick="light.light_switch(1)">On
+					    </label>
+
+					    <div class="text-success" id="light_health_ok" hidden>HEALTH: OK</div>
+					    <div class="text-danger" id="light_health_bad" hidden>HEALTH: BAD</div>
+            		</div>
+            	</div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-times"></i> Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
