@@ -29,5 +29,8 @@ class Base:
 			dev_logger.log(5, msg)
 
 	def render(self, template_name=None, variables=None):
-		return HttpResponse(render_to_string(template_name, context=variables))
-		
+		try:
+			return HttpResponse(render_to_string(template_name, context=variables))
+		except Exception as e: 
+			self.log('error', e)
+			return HttpResponse("Error in template: "+ template_name)

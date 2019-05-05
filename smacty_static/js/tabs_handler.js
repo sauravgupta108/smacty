@@ -48,10 +48,22 @@ var light = new function(){
 				$("#lt_zone").val(ll_filters.zone)
 			},
 			error : function(){
-				alert("Error........")
+				alert("Error.....123...")
 			},
 		});
 	};
+
+	this.show_modal = function(light_detail_str){
+		 // $("div#light_id").text(light_detail['light_id']);
+		 console.log(light_detail_str.replace(/'/g, '"'));
+		 console.log(JSON.parse(light_detail_str.replace(/'/g, '"')));
+
+		 $("div#light_details").modal({})
+	}
+
+	this.light_switch = function(){
+		console.log("OK")
+	}
 };
 
 var dustbin = new function(){
@@ -65,3 +77,10 @@ var water_tank = new function(){
 		$("div#entity_content").html("<p>Water Tanks</p>")
 	};
 };
+
+var helper = new function(){
+	this.json_string_to_array = function(str){
+		//{'light_id': 'SL001', 'street_number': 1, 'health': 1, 'running_status': True, 'zone': 'zone001'}
+
+	}
+}

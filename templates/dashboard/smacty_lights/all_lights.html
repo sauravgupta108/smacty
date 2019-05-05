@@ -4,6 +4,7 @@
 	<style>
 		span {font-size: 2em;}		
 	</style>
+	{% include "dashboard/smacty_lights/light_modal.html" %}
 
 {% endblock %}
 
@@ -20,7 +21,7 @@
 			<button class="btn btn-warning btn-lg btn-block">ON <span class="badge">{{ runnig_lights }}</span></button>
 		</div>
 		<div class="col-xs-4 col-sm-4 " style="padding: 2px;">
-			<button class="btn btn-success btn-lg btn-block">OK <span class="badge">{{ health_ok}}</span></button>
+			<button class="btn btn-danger btn-lg btn-block">Not OK <span class="badge">{{ health_ok}}</span></button>
 		</div>
 	</div>
 {% endblock %}
@@ -51,5 +52,57 @@
 {% endblock %}
 
 {% block results %}
-	Results
+	
+	{# light results returned from API #}
+	{% if APIError %}
+		<div class="alert alert-error">
+			<p>No Records Found.</p>
+		</div>
+	{% endif %}
+	{% if ErrorMsg %}
+		<div class="alert alert-error">
+			<p>Invalid Data. Please check Input Details.</p>
+		</div>
+	{% endif %}
+	<table class="table table-striped table-responsive">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Status</th>
+				<th>Health</th>
+				<th>Location</th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for i in APIData %}
+				<tr>
+					<td>
+						<a class="text-primary" onclick='light.show_modal("{{ i }}")'>{{ i.light_id }}</a>
+					</td>
+					<td>
+						{% if i.running_status %}
+							<p class="glyphicon glyphicon-fire" style="color: #ffea00;"></p>
+						{% else %}
+							<p class="glyphicon glyphicon-fire"></p>
+						{% endif %}
+					</td>
+					<td>
+						{% if i.health == 1 %}
+							<p class="glyphicon glyphicon-ok-sign" style="color: #43a047;"></p>
+						{% elif i.health == 2 %}
+							<p class="glyphicon glyphicon-info-sign" style="color: #ff7043;"></p>
+						{% else %}
+							<p class="glyphicon glyphicon-remove-sign" style="color: #d50000;"></p>
+						{% endif %}
+					</td>
+					<td> 
+						<h5 style="color:#0d47a1;" class="glyphicon glyphicon-home">
+							{{ i.street_number }}, {{ i.zone }}
+						</h5>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	
 {% endblock %}
