@@ -1,0 +1,13 @@
+{% extends "dashboard/linwazs.html" %}
+
+{% block initial_scripts %}
+	<style>
+		span {font-size: 2em;}		
+	</style>
+	{% include "dashboard/smacty_dustbins/dustbin_modal.html" %}
+
+{% endblock %}
+
+{% block Heading %}	
+	<span class = "glyphicon glyphicon-trash" style="color: #4a995a;"></span> <span class=>Dustbins</span>
+{% endblock %}

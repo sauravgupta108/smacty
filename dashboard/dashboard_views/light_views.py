@@ -11,4 +11,4 @@ def all_lights(request):
 
 @login_required
 def light_details(reuqest, light_id):
-	pass
+	return Light(request).light(light_id)

@@ -52,35 +52,70 @@ var light = new function(){
 			},
 		});
 	};
-
+	/*{light_id: "SL001", street_number: 1, health: 1, running_status: "True", zone: "zone001"}*/
 	this.show_modal = function(light_detail_str){
-		 // $("div#light_id").text(light_detail['light_id']);
-		 console.log(light_detail_str.replace(/'/g, '"'));
-		 console.log(JSON.parse(light_detail_str.replace(/'/g, '"')));
+		 var json_string = light_detail_str.replace(/True/g, "'True'");
+		 json_string = json_string.replace(/False/g, "'False'");
+		 
+		 var light = JSON.parse(json_string.replace(/'/g, '"'))
+		 
+		 $("div#light_id").text(light['light_id']);
+		 $("div#light_location").text("Location: " + light['street_number'] + "," + light['zone']);
 
-		 $("div#light_details").modal({})
+		 if (light["running_status"] === "True"){
+		 	$("input#light_on").prop("checked", true); $("input#light_off").prop("checked", false);
+		 }
+
+		 else if (light["running_status"] === "False"){
+		 	$("input#light_on").prop("checked", false); $("input#light_off").prop("checked", true);
+		 }
+
+		 else{
+		 	$("input#light_on").hide(); $("input#light_off").hide();
+		 }
+		 
+		 if(light["health"] === 1){
+		 	$("div#light_health_bad").hide(); $("div#light_health_ok").show();
+		 }
+
+		 else {
+		 	$("div#light_health_bad").show(); $("div#light_health_ok").hide();
+		 }
+
+		 $("div#light_details").modal({});
 	}
 
-	this.light_switch = function(){
-		console.log("OK")
+	this.light_switch = function(switch_position){
+		console.log(switch_position);
 	}
 };
 
 var dustbin = new function(){
 	this.dustbins = function(){
-		$("div#entity_content").html("<p>Dustbins</p>")
+		$("div#entity_content").html("<p>Loading...</p>")		
+		$.ajax({
+			url : "dustbins",
+			success : function(data){
+				$("div#entity_content").html(data);				
+			},
+			error : function(){
+				alert("Error........")
+			},
+		});
 	};
 };
 
 var water_tank = new function(){
 	this.tanks = function(){
-		$("div#entity_content").html("<p>Water Tanks</p>")
+		$("div#entity_content").html("<p>Loading...</p>")		
+		$.ajax({
+			url : "tanks",
+			success : function(data){
+				$("div#entity_content").html(data);				
+			},
+			error : function(){
+				alert("Error........")
+			},
+		});
 	};
 };
-
-var helper = new function(){
-	this.json_string_to_array = function(str){
-		//{'light_id': 'SL001', 'street_number': 1, 'health': 1, 'running_status': True, 'zone': 'zone001'}
-
-	}
-}

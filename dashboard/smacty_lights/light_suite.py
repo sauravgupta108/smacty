@@ -53,3 +53,5 @@ class Light(Base):
 
 		return  self.render("dashboard/smacty_lights/all_lights.html", variables)
 		
+	def light(self, light_id):
+		pass
