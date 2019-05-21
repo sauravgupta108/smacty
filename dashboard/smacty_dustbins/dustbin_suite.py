@@ -15,3 +15,6 @@ class Dustbin(Base):
 		# summary = api_client.api_response_get(params)
 			
 		return  self.render("dashboard/smacty_dustbins/all_dustbins.html")
+
+	def dustbin(self, dustbin_id):
+		pass

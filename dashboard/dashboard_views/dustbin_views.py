@@ -11,4 +11,4 @@ def all_dustbins(request):
 
 @login_required
 def dustbin_details(reuqest, dustbin_id):
-	pass
+	return Dustbin(request).dustbin(ldustbin_id)

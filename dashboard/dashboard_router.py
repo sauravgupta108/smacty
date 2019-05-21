@@ -10,8 +10,12 @@ urlpatterns = [
     path('contact', dview.misc_views.contact, name = 'contact'),
     path('about', dview.misc_views.about, name = 'about'),
     path('lights', dview.light_views.all_lights, name='all_lights'),
+    # path('light/<light_id>', dview.light_details, name='light_no'),
     path('dustbins', dview.dustbin_views.all_dustbins, name='all_dustbins'),
+    # path('dustbin/<dustbin_id>', dview.light_details, name='light_no'),
     path('tanks', dview.tank_views.all_water_tanks, name='all_water_tanks'),
+    # path('light/<water_tank_id>', dview.light_details, name='light_no'),
+    
     # path('publish', dview.misc_views.publish, name = 'publish'),
     # path('subscribe', dview.misc_views.subscribe, name = 'subscribe'),
 ]
