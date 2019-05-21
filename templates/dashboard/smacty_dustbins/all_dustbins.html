@@ -11,3 +11,21 @@
 {% block Heading %}	
 	<span class = "glyphicon glyphicon-trash" style="color: #4a995a;"></span> <span class=>Dustbins</span>
 {% endblock %}
+
+{% block summary %}
+	
+{% endblock %}
+
+{% block filters %}
+	<div class="form-inline">
+		<label for="dbn_street_number">Street Number: </label>
+		<input type="text" id="dbn_street_number" class="form-control" onchange="dustbin.dustbin_filters()">
+
+		<label for="dbn_filled_status">Filled status: </label>
+		<input type="radio" class="form-control" onchange="dustbin.dustbin_filters()" id="dbn_filled_status">
+
+		<label for="dbn_zone">Zone: </label>
+		<input type="text" id="dbn_zone" class="form-control" onchange="dustbin.dustbin_filters()">
+
+	</div>
+{% endblock %}
