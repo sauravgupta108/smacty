@@ -139,8 +139,7 @@ var dustbin = new function(){
 				alert("Error.....123...");
 			},
 		});
-	}
-};
+	};
 
 var water_tank = new function(){
 	this.tanks = function(){
@@ -154,5 +153,8 @@ var water_tank = new function(){
 				alert("Error........")
 			},
 		});
+	};
+	this.water_tank_filters = function(){
+		console.log("Water Tank filters")
 	};
 };

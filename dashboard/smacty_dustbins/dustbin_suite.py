@@ -45,5 +45,7 @@ class Dustbin(Base):
 			self.log("error", e)
 		except Exception as e:
 			self.log("error", e)
-			
 		return  self.render("dashboard/smacty_dustbins/all_dustbins.html", variables)
+
+	def dustbin(self, dustbin_id):
+		pass

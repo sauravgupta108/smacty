@@ -10,4 +10,4 @@ def all_water_tanks(request):
 
 @login_required
 def water_tank_details(reuqest, tank_id):
-	pass
+	return Tank(request).tank(tank_id)

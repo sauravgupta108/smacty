@@ -15,3 +15,6 @@ class Tank(Base):
 		# summary = api_client.api_response_get(params)
 			
 		return  self.render("dashboard/smacty_water_tanks/all_water_tanks.html")
+
+	def tank(self, tank_id):
+		pass

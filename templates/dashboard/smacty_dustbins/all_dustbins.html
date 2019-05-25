@@ -24,6 +24,7 @@
 			<button class="btn btn-success btn-lg btn-block">Not Full <span class="badge">{{ NotFull }}</span></button>
 		</div>
 	</div>
+	
 {% endblock %}
 
 {% block filters %}
@@ -47,4 +48,14 @@
 	{% for i in APIData %}
 		{{ i }}<br>
 	{% endfor %}
+		<label for="dbn_street_number">Street Number: </label>
+		<input type="text" id="dbn_street_number" class="form-control" onchange="dustbin.dustbin_filters()">
+
+		<label for="dbn_filled_status">Filled status: </label>
+		<input type="radio" class="form-control" onchange="dustbin.dustbin_filters()" id="dbn_filled_status">
+
+		<label for="dbn_zone">Zone: </label>
+		<input type="text" id="dbn_zone" class="form-control" onchange="dustbin.dustbin_filters()">
+
+	</div>
 {% endblock %}
