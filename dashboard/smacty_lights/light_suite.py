@@ -16,9 +16,9 @@ class Light(Base):
 		api_client = HandleApiRequest(entity=self.__entity, get_list=True)
 		summary = api_client.api_response_get(params)
 
-		variables["total_lights"] = len(summary)
-		variables["runnig_lights"] = len([i for i in summary if i["running_status"] ])
-		variables["health_ok"] = len([i for i in summary if i["health"] != 1 ])
+		variables["TotalLights"] = len(summary)
+		variables["Running"] = len([i for i in summary if i["running_status"] ])
+		variables["NotHealthy"] = len([i for i in summary if i["health"] != 1 ])
 		
 		try:
 			if 'street_number' in self.request.GET:

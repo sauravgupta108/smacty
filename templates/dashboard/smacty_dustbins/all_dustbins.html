@@ -11,3 +11,40 @@
 {% block Heading %}	
 	<span class = "glyphicon glyphicon-trash" style="color: #4a995a;"></span> <span class=>Dustbins</span>
 {% endblock %}
+
+{% block summary %}
+	<div class="row">		
+		<div class="col-xs-4 col-sm-4" style="padding: 2px;">
+			<button class="btn btn-info btn-lg btn-block">Total <span class="badge">{{ TotalDustbins }}</span></button>
+		</div>
+		<div class="col-xs-4 col-sm-4" style="padding: 2px;">
+			<button class="btn btn-danger btn-lg btn-block">Full <span class="badge">{{ Full }}</span></button>
+		</div>
+		<div class="col-xs-4 col-sm-4 " style="padding: 2px;">
+			<button class="btn btn-success btn-lg btn-block">Not Full <span class="badge">{{ NotFull }}</span></button>
+		</div>
+	</div>
+{% endblock %}
+
+{% block filters %}
+	<div class="form-inline">
+		<label for="dbn_filled">Filled: </label>
+		<select class="form-control" id="dbn_filled" onchange="dustbin.dustbin_filters()">
+			<option value="-1">--Select--</option>
+			<option value="1">Full</option>
+			<option value="0">Not Full</option>
+		</select>
+
+		<label for="dbn_street_number">Street Number: </label>
+		<input type="text" class = "form-control" id="dbn_street_number" onchange="dustbin.dustbin_filters()"/>
+
+		<label for="dbn_zone">Zone: </label>
+		<input type="text" class = "form-control" id="dbn_zone" onchange="dustbin.dustbin_filters()"/>
+	</div>
+{% endblock %}
+
+{% block results %}
+	{% for i in APIData %}
+		{{ i }}<br>
+	{% endfor %}
+{% endblock %}

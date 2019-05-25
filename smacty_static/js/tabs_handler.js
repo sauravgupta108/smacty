@@ -103,6 +103,43 @@ var dustbin = new function(){
 			},
 		});
 	};
+
+	this.dustbin_filters = function(){
+		var dbn_filters = {}
+
+		var filled_status = $("#dbn_filled").val();
+		if(Number(filled_status) != -1){ dbn_filters.filled_status = filled_status; }
+		else { dbn_filters.filled_status = -1; }
+
+		if($("#dbn_street_number").val() != ""){
+			var street = Number($("#dbn_street_number").val())
+			if(!street || (street <= 0)){
+				$("#dbn_street_number").val("")
+				alert("Street Number must be a Positive Integer");			
+			}
+			else{ dbn_filters.street_number = street; }
+		}
+
+		var dbn_zone = $("#dbn_zone").val()
+		if(dbn_zone != ""){ dbn_filters.zone = dbn_zone; }
+
+		$.ajax({
+			url : "dustbins",
+			data: dbn_filters,
+			success : function(data){
+				$("div#entity_content").html(data);
+
+				// Set status to previous as before 
+				$("#dbn_filled").val(dbn_filters.filled_status);
+				if(dbn_filters.street_number){ $("#dbn_street_number").val(dbn_filters.street_number); }
+				
+				if(dbn_filters.zone){ $("#dbn_zone").val(dbn_filters.zone); }
+			},
+			error : function(){
+				alert("Error.....123...");
+			},
+		});
+	}
 };
 
 var water_tank = new function(){

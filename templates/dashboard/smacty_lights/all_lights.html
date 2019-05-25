@@ -15,13 +15,13 @@
 {% block summary %}
 	<div class="row">		
 		<div class="col-xs-4 col-sm-4" style="padding: 2px;">
-			<button class="btn btn-info btn-lg btn-block">Total <span class="badge">{{ total_lights }}</span></button>
+			<button class="btn btn-info btn-lg btn-block">Total <span class="badge">{{ TotalLights }}</span></button>
 		</div>
 		<div class="col-xs-4 col-sm-4" style="padding: 2px;">
-			<button class="btn btn-warning btn-lg btn-block">ON <span class="badge">{{ runnig_lights }}</span></button>
+			<button class="btn btn-warning btn-lg btn-block">ON <span class="badge">{{ Running }}</span></button>
 		</div>
 		<div class="col-xs-4 col-sm-4 " style="padding: 2px;">
-			<button class="btn btn-danger btn-lg btn-block">Not OK <span class="badge">{{ health_ok}}</span></button>
+			<button class="btn btn-danger btn-lg btn-block">Not OK <span class="badge">{{ NotHealthy }}</span></button>
 		</div>
 	</div>
 {% endblock %}
